@@ -89,9 +89,7 @@ JOIN return_status AS rs ON iss.issued_id=rs.issued_id
 WHERE rs.book_quality='Damaged'
 GROUP BY 1,2;
 ```
-## Q5: create a new table that lists each member and the books they have issued but not returned within 30 days. 
-## The table should include: The number of overdue books. The total fines, with each day's fine calculated at 0.50. The number of books issued by each member. 
-## The resulting table should show: Member ID Number of overdue books Total fines
+## Q5: create a new table that lists each member and the books they have issued but not returned within 30 days.  The table should include: The number of overdue books. The total fines, with each day's fine calculated at 0.50. The number of books issued by each member. The resulting table should show: Member ID Number of overdue books Total fines
 ```sql
 CREATE TABLE overdue_fine_summary AS
 SELECT iss.issued_member_id AS member_id,
